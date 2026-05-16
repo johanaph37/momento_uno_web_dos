@@ -4,10 +4,13 @@ import logo from "../assets/logo.jpg";
 
 function Register({ onSwitch, onLogin }) {
   const [form, setForm] = useState({
-    nombre: "",
-    email: "",
-    password: ""
+    nombre: "Carlos",
+    email: "carlos@ejemplo.com",
+    password: "741258"
   });
+
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
     setForm({
@@ -19,10 +22,22 @@ function Register({ onSwitch, onLogin }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (!form.email.includes("@")) {
+      setErrorMessage("Tienes que registrar @ en el correo");
+      setSuccessMessage("");
+      return;
+    }
+
     if (form.nombre && form.email && form.password) {
-      onLogin(); // entra directo después de registrarse
+      setSuccessMessage("Registro exitoso");
+      setErrorMessage("");
+      setTimeout(() => {
+        setSuccessMessage("");
+        onLogin(); // entra directo después de registrarse
+      }, 2000);
     } else {
-      alert("Completa los campos");
+      setErrorMessage("Completa los campos");
+      setSuccessMessage("");
     }
   };
 
@@ -38,6 +53,14 @@ function Register({ onSwitch, onLogin }) {
         <h2 className="auth-title">
           Crear <span>Cuenta</span>
         </h2>
+
+        {successMessage && (
+          <div className="auth-message success">{successMessage}</div>
+        )}
+
+        {errorMessage && (
+          <div className="auth-message error">{errorMessage}</div>
+        )}
 
         <form onSubmit={handleSubmit}>
           <input
@@ -70,7 +93,9 @@ function Register({ onSwitch, onLogin }) {
           <button className="auth-button" type="submit">
             Registrarse
           </button>
-        </form>
+     
+
+   </form>
 
         <div className="auth-footer">
           ¿Ya tienes cuenta?{" "}
