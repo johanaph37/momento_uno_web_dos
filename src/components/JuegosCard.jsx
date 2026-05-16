@@ -3,11 +3,6 @@ import "./JuegosCard.css";
 function JuegosCard({ juego }) {
   const { titulo, categoria, dificultad, jugadores, rating, descripcion, color, emoji, badge } = juego;
 
-  const dificultadClase =
-    dificultad === "Fácil" ? "dificultad--facil" :
-    dificultad === "Medio" ? "dificultad--medio" :
-    "dificultad--dificil";
-
   return (
     <article className="juego-card" style={{ "--card-color": color }}>
 
@@ -31,9 +26,14 @@ function JuegosCard({ juego }) {
           <span>⭐ {rating}</span>
         </div>
 
-        <button className="juego-card__btn">
-          Jugar Ahora →
-        </button>
+        <a
+          className="juego-card__btn"
+          href={juego.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explora Aquí →
+        </a>
       </div>
 
     </article>

@@ -10,6 +10,7 @@ export const JUEGOS = [
     color: "#00f5ff",
     emoji: "🧮",
     badge: "POPULAR",
+    url: "https://www.mathplayground.com/",
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ export const JUEGOS = [
     color: "#ff2d78",
     emoji: "⚔️",
     badge: "NUEVO",
+    url: "https://www.cerebriti.com/juegos-de-historia/",
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ export const JUEGOS = [
     color: "#00ff87",
     emoji: "🧬",
     badge: "TOP RATED",
+    url: "https://kids.nationalgeographic.com/games/",
   },
   {
     id: 4,
@@ -46,6 +49,7 @@ export const JUEGOS = [
     color: "#ffd700",
     emoji: "⚡",
     badge: null,
+    url: "https://www.physicsgames.net/",
   },
   {
     id: 5,
@@ -58,6 +62,7 @@ export const JUEGOS = [
     color: "#c084fc",
     emoji: "📚",
     badge: null,
+    url: "https://www.cerebriti.com/juegos-de-literatura/mas-recientes/",
   },
   {
     id: 6,
@@ -70,6 +75,33 @@ export const JUEGOS = [
     color: "#fb923c",
     emoji: "🌍",
     badge: "HOT",
+    url: "https://www.seterra.com/es/",
+  },
+  {
+    id: 7,
+    titulo: "English Quest",
+    categoria: "Inglés",
+    dificultad: "Medio",
+    jugadores: 856,
+    rating: 4.6,
+    descripcion: "Aprende inglés mientras viajas por el mundo completando misiones lingüísticas.",
+    color: "#1e40af",
+    emoji: "🌐",
+    badge: "NUEVO",
+    url: "https://duckenglish.com/",
+  },
+  {
+    id: 8,
+    titulo: "Art Atelier",
+    categoria: "Dibujo",
+    dificultad: "Fácil",
+    jugadores: 923,
+    rating: 4.7,
+    descripcion: "Crea obras maestras digitales y participa en desafíos de arte con otros jugadores.",
+    color: "#be185d",
+    emoji: "🎨",
+    badge: "NUEVO",
+    url: "https://poki.com/es/dibujar?",
   },
 ];
 
@@ -144,5 +176,5 @@ export const STATS_PLATAFORMA = [
 ];
 
 export const CATEGORIAS = [
-  "Todos", "Matemáticas", "Historia", "Biología", "Física", "Literatura", "Geografía"
+  "Todos", "Matemáticas", "Historia", "Biología", "Física", "Literatura", "Geografía", "Inglés", "Dibujo"
 ];
