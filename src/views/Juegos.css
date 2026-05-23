@@ -97,6 +97,11 @@
   gap: 20px;
 }
 
+/* Enable perspective so child cards can perform 3D transforms */
+.juegos__grid {
+  perspective: 1200px;
+}
+
 /* Sin resultados */
 .juegos__empty {
   text-align: center;

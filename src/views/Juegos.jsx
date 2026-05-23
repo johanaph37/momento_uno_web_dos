@@ -61,7 +61,10 @@ function Juegos() {
       {juegosFiltrados.length > 0 ? (
         <div className="juegos__grid">
           {juegosFiltrados.map((juego) => (
-            <JuegosCard key={juego.id} juego={juego} />
+            <JuegosCard
+              key={juego.id}
+              juego={juego}
+            />
           ))}
         </div>
       ) : (
